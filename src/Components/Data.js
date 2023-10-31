@@ -1,0 +1,64 @@
+const Data = [
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/S71vTBh/image-11.jpg",
+      "size": "large"
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/FYb0rtF/image-1.webp",
+      "size": "small"
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/tDCpHzd/image-2.webp",
+      "size": "small"
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/MVQYGpJ/image-3.webp",
+      "size": "small"
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/2srf6fs/image-5.webp",
+      "size": "small"
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/dcV3M71/image-4.webp",
+      "size": "small"
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/SPncpv8/image-6.webp",
+      "size": "small"
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/rmYqysZ/image-7.webp",
+      "size": "small"
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/WWfmLDn/image-8.webp",
+      "size": "small"
+    },
+    {
+      "id": 10,
+      "img": "https://i.ibb.co/6X5Rn8d/image-9.webp",
+      "size": "small"
+    },
+    {
+      "id": 11,
+      "img": "https://i.ibb.co/cx6p6ZJ/image-10.jpg",
+      "size": "small"
+    }
+    
+  ]
+  
+
+
+
+
+export default Data;
