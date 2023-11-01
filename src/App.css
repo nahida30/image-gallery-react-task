@@ -47,7 +47,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: grab;
   padding: 0px 15px;
+  
   
   
 
@@ -57,3 +59,4 @@
   bottom: 0;
   transition: 1s ease;
 }
+

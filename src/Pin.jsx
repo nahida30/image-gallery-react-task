@@ -1,20 +1,24 @@
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
 
-const Pin = ({pinSize, img}) => {
-    return (
-        <div className= {`pin ${pinSize}`}>
-            <img className='images'  src={img} alt="" />
-        <div className='content'>
-            <h3>sample</h3>
-            <div>
-                <input type="checkbox" name="checkbox" id="checkbox" />
-            </div>
-        </div>
-        
-        
-        
-        </div>
-    );
+const Pin = ({ pinSize, img }) => {
+  const [isChecked, setIsChecked] = useState(false);
+  const [showDeleteButton, setShowDeleteButton] = useState(false);
+
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+    setShowDeleteButton(e.target.checked);
+  };
+
+  const handleDeleteClick = () => {
+    
+  };
+
+  return (
+    <div>
+      <h1> hlo </h1>
+    </div>
+  );
 };
 
 export default Pin;

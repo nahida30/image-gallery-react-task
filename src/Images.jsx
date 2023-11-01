@@ -1,22 +1,37 @@
-import './App.css'
 import React from 'react';
-import Pin from './Pin';
 import Data from './Components/Data';
 
-const Images = () => {
-    return (
-        <div className='container'>
-            {/* <h1>hello</h1> */}
-            {
-                Data && Data.map((data) => <Pin key={data.id} pinSize = {data.size}
-                img={data.img}></Pin> )
-            }
-            {/* <Pin pinSize = {"large"}></Pin>
-            <Pin pinSize = {"small"}></Pin> */}
-            {/* <Pin pinSize = {"medium"}></Pin> */}
+const Images = ({ onClickCheck, clickedIds, currentId }) => {
+  const handleCheckboxClick = (id) => {
+    onClickCheck(id);
+  };
+
+  
+  return (
+    <div className='container'>
+      {Data.map((data) => (
+        <div className={`pin ${data.size}`} key={data.id} draggable>
+          <img
+            className={`images ${clickedIds.includes(data.id) ? 'selected' : ''}`}
+            src={data.img}
+            alt=""
+          />
+          <div className="content">
             
+            <div>
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="checkbox"
+                checked={clickedIds.includes(data.id)}
+                onChange={() => handleCheckboxClick(data.id)}
+              />
+            </div>
+          </div>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default Images;
