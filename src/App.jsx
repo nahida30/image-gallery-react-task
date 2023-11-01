@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Images from './Images';
 import Swal from 'sweetalert2';
+import Data from './Components/Data';
 
 function App() {
   const [clickedIds, setClickedIds] = useState([]);
@@ -21,8 +22,11 @@ function App() {
 
   function deleteSelectedFiles() {
     if (clickedIds.length === 0) {
-      return; 
+      return;
     }
+    const updatedData = Data.filter((item) => !clickedIds.includes(item.id));
+    Data.length = 0;
+  Data.push(...updatedData);
 
     // Alert to confirm deletion
     Swal.fire({
