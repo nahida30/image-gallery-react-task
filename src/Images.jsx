@@ -10,7 +10,7 @@ const Images = ({ onClickCheck, clickedIds, currentId }) => {
   return (
     <div className='container'>
       {Data.map((data) => (
-        <div className={`pin ${data.size}`} key={data.id} draggable>
+        <div className={`pin ${data.size} ${clickedIds.includes(data.id) ? 'checked' : ''}`} key={data.id} draggable>
           <img
             className={`images ${clickedIds.includes(data.id) ? 'selected' : ''}`}
             src={data.img}
