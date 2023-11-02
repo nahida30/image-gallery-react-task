@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Data from './Components/Data';
 
 const Images = ({ onClickCheck, clickedIds, currentId }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [draggedImage, setDraggedImage] = useState(null);
-  const [imageData, setImageData] = useState(Data);
+  const [isHovered, setIsHovered] = useState(false); //track hover state
+  const [draggedImage, setDraggedImage] = useState(null); //track dragged image
+  const [imageData, setImageData] = useState(Data); //store image data
 
   const handleCheckboxClick = (id) => {
     onClickCheck(id);
@@ -19,11 +19,13 @@ const Images = ({ onClickCheck, clickedIds, currentId }) => {
       setIsHovered(false);
     }
   };
-
+  
+  // handle drag start and store dragged image 
   const handleDragStart = (e, data) => {
     e.dataTransfer.setData('text/plain', JSON.stringify(data));
     setDraggedImage(data);
   };
+
 
   const handleDragOver = (e) => {
     e.preventDefault();
@@ -46,6 +48,8 @@ const Images = ({ onClickCheck, clickedIds, currentId }) => {
     setImageData(updatedImageData);
   };
 
+
+  // render the component  
   return (
     <div className='container'>
       {imageData.map((data) => (

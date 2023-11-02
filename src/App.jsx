@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import Data from './Components/Data';
 
 function App() {
+
   const [clickedIds, setClickedIds] = useState([]);
   const [currentId, setCurrentId] = useState(null);
 
@@ -14,7 +15,8 @@ function App() {
       if (!prevIds.includes(id)) {
         return [...prevIds, id];
       } else {
-        // Remove the ID if it's already in the clickedIds array
+
+        // remove the number of clicked id it's already checked
         return prevIds.filter((clickedId) => clickedId !== id);
       }
     });
@@ -28,7 +30,7 @@ function App() {
     Data.length = 0;
   Data.push(...updatedData);
 
-    // Alert to confirm deletion
+    // Alert to confirm deletion using sweetAlert2
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -55,6 +57,7 @@ function App() {
   return (
     <>
       <div className='flex justify-between'>
+        
         <h1 className='bg-base-100 text-3xl p-4'>
           {(clickedIds.length === 0 ? 'Gallery' : `${clickedIds.length} File${clickedIds.length > 1 ? 's' : ''} Selected`)}
         </h1>
