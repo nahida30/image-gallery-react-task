@@ -6,4 +6,5 @@ This task is completed using react js. The features this project will provide:
 1. User can select multiple images as they want.
 2. User can delete the choosing images.
 3. User can reorder the images using 'react-beautiful-dnd' library.
+   
 
