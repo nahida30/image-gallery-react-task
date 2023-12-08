@@ -7,4 +7,5 @@ This task is completed using react js. The features this project will provide:
 2. User can delete the choosing images.
 3. User can reorder the images using 'react-beautiful-dnd' library.
    
-
+# Here I used :
+- Fake json file containing images and use Css file for creating 2 types of size. And use React Route
