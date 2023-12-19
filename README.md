@@ -1,5 +1,5 @@
 # Image Gallery (pinterest clone)
-Tried to do pinterest clone using React Js and create masonry grid using CSS. Here the special feature is user can re order the images and cat deleted the images .
+Tried to do pinterest clone using React Js and create masonry grid using CSS. Here the special feature is user can re order the images and can deleted the images .
 Live link: https://65431d4a8fec0a030e11d180--loquacious-khapse-ac1afb.netlify.app/
 
 This task is completed using react js. The features this project will provide:
